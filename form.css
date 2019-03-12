@@ -1,0 +1,240 @@
+#main{
+      flex-wrap: wrap;
+      display: flex;
+  width:100%;
+
+}
+#co{
+  text-align: center;
+}
+#select1{
+  margin: 1%;
+    width: 95%;
+}
+.career{
+  width: 94%;
+border: 2px solid pink;
+margin: 1%;
+padding: 1%;
+box-shadow: 3px pink;
+}
+#personlinfo{
+  width: 45%;
+padding: 1%;
+margin: 1%;
+border: 2px solid pink;
+box-shadow: 3px pink;
+}
+#name,#role,#email,#phno{
+  margin: 1%;
+    width: 90%;
+}
+#ginfo{
+  width: 45%;
+padding: 1%;
+margin: 1%;
+border: 2px solid pink;
+box-shadow: 3px pink;
+}
+#select2,#select3{
+  margin: 1%;
+    width: 90%;
+}
+#institute,#yearofpassing,#percentage{
+  margin: 1%;
+    width: 90%;
+}
+.interinfo{
+  width: 45%;
+padding: 1%;
+margin: 1%;
+border: 2px solid pink;
+box-shadow: 3px black;
+}
+#select4,#select5{
+  margin: 1%;
+    width: 90%;
+}
+#institute2,#yearofpassing2,#percentage2{
+  margin: 1%;
+    width: 90%;
+}
+.sscinfo{
+  width: 45%;
+padding: 1%;
+margin: 1%;
+border: 2px solid pink;
+box-shadow: 3px pink;
+}
+#select6,#select7{
+  margin: 1%;
+    width: 90%;
+}
+#institute3,#yearofpassing3,#percentage3{
+  margin: 1%;
+    width: 90%;
+}
+#tech{
+  width: 45%;
+padding: 1%;
+margin: 1%;
+border: 2px solid pink;
+box-shadow: 3px pink;
+}
+#ps,#ws,#db{
+  margin: 1%;
+    width: 90%;
+}
+#acheive{
+  width: 45%;
+padding: 1%;
+margin: 1%;
+border: 2px solid pink;
+box-shadow: 3px pink;
+}
+#a1,#a2,#a3{
+  margin: 1%;
+    width: 90%;
+}
+button{
+  margin-left: 45%;
+font-size: 28px;
+background-color: wheat;
+}
+#personlinfo,#ginfo,.sscinfo,.interinfo,#tech,#acheive,.career{
+  box-shadow: 5px 5px 5px #aad;
+}
+  @media (min-device-width:320px) and (max-device-width:480px) {
+#main{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.career{
+  width: 94%;
+}
+#personlinfo,#ginfo,.sscinfo,.interinfo,#tech,#acheive{
+  width: 94%;
+
+}
+#select1,#name,#role,#email,#phno,#select2,#select3,
+#institute,#yearofpassing,#percentage,#select4,#select5,
+#institute2,#yearofpassing2,#percentage2,#select6,#select7,
+#institute3,#yearofpassing3,#percentage3,#ps,#ws,#db,#a1,#a2,#a3
+{
+  margin:2%;
+}
+h2{
+  margin: 2%;
+}
+button {
+    margin-left: 30%;
+  }
+  }
+  @media (min-device-width:481px) and (max-device-width:780px){
+
+
+
+
+
+
+
+  }
+/*  resume.css*/
+
+img{
+  width:130px;
+  border-radius: 50%;
+}
+
+.main{
+background-color:white;
+display:flex;
+flex-wrap: wrap;
+justify-content: space-between;
+
+}
+.left{
+  width: 24%;
+    text-align: center;
+    background-color: pink;
+    font-size: 20px;
+    color: red;
+  }
+  .right{
+    background-color: #aad;
+    width: 75%;
+    padding:5px;
+  }
+
+  @media (min-device-width:320px) and (max-device-width:480px) {
+ .main{
+ 	width: 100%;
+ }
+ .left{
+ 	width: 96%;
+ 	display: flex;
+ 	position: absolute;
+ 	margin: auto;
+ 	margin-bottom: 10%;
+ }
+ .left1{
+ 	width: 50%;
+ }
+ .left2{
+    text-align: left;
+ 	width: 50%;
+ 	margin: auto;
+ 	padding: .0 0 0 2%;
+
+ }
+ p{
+
+ 	display: flex;
+ }
+ img{
+ 	width: 70%;
+    border-radius: 50%;
+ }
+  .right{
+  	width: 100%;
+  	margin-left: 0px;
+  	margin-top: 21em;
+  }
+}
+  @media (min-device-width:481px) and (max-device-width:780px) {
+ .main{
+  width: 100%;
+ }
+ .left{
+  width:98%;
+
+  position: absolute;
+  margin: auto;
+  margin-bottom: 10%;
+ }
+ .left1{
+  width: 50%;
+  margin: auto;
+ }
+ .left2{
+    text-align: center;
+  width: 50%;
+  margin: auto;
+  padding: .0 0 0 2%;
+
+ }
+ p{
+
+display: flex;
+ }
+ img{
+  width: 50%;
+    border-radius: 50%;
+ }
+  .right{
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 41em;
+  }

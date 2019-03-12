@@ -1,0 +1,118 @@
+#h1{
+    text-align: center;
+        border: 1px solid black;
+        background: #aad;
+        font-size: 55px;
+font-family: monospace
+}
+#img1{
+  width: 18%;
+margin-left: 42%;
+}
+  p{
+    text-align: center;
+    color: blue;
+  }
+
+#div1{
+  width: 50%;
+      margin-left: 23%;
+      background: beige;
+}
+  @media (min-device-width:320px) and (max-device-width:480px) {
+#div1{
+  width: 74%;
+margin-left: 13%;
+background: beige;
+}
+#h1{
+  font-size: 30px;
+}
+#img1{
+  width: 42%;
+margin-left: 32%;
+
+}
+}
+/* cardstyles */
+h1{
+  text-align: center;
+}
+.main{
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.left{
+  border:2px solid black;
+  width: 20%;
+  text-align: center;
+  background-color: #aad;
+  padding: 5px;
+  margin: 1%;
+  border-radius: 5%;
+  font-size: 1em;
+  font-family: monospace;
+
+}
+
+.right{
+  margin-left: 20px;
+  border:2px solid black;
+  width: 20%;
+  text-align: center;
+  background-color: #aad;
+  padding: 5px;
+  border-radius: 5%;
+  font-size: 20px;
+  font-family: monospace;
+}
+.img{
+      width: 180px;
+      border-radius: 50%;
+}
+@media (min-device-width:320px) and (max-device-width:480px) {
+.main{
+width: 100%;
+/* margin-left: 37px; */
+
+}
+.left{
+
+      width:90%;
+      margin: 1%;
+
+    }
+    .right{
+      margin-top: 100vh;
+  width: 70%;
+  margin-left: 0%;
+  position: relative;
+
+}
+img{
+  width: 204px;
+}
+    }
+    @media (min-device-width:481px) and (max-device-width:780px) {
+    .main{
+    width: 100%;
+    margin-left: 37px;
+
+    }
+    .left{
+          position:absolute;
+          width: 40%;
+          margin-left: 23%;
+
+        }
+        .right{
+          margin-top: 40vh;
+      width: 40%;
+      margin-left: 23%;
+
+      position: relative;
+
+    }
+        }

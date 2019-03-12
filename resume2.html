@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html lang="en" div="ltr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <link rel="stylesheet" href="form.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+
+      </div>
+      <div class="right">
+
+      </div>
+
+    </div>
+  </body>
+  </html>
+    <script type="text/javascript">
+      var query=window.location.search.substring(1).split("?");
+      console.log(query);
+      var resumeData;
+      query.map((data)=>{
+        let split=data.split("=");
+        resumeData=parseInt(split[1]);
+        console.log(resumeData);
+      });
+      //browser checking
+
+
+      /*creating IndexedDB database with version */
+
+         var request=indexedDB.open("formDB",1);
+         var result;
+         var store;
+
+
+         request.onupgradeneeded=function(e) {
+         result=e.target.result;
+         //console.log(result);
+         store=result.createObjectStore("resume",{keyPath:'id',autoIncrement:true});
+          // console.log(store);
+         }
+
+         request.onsuccess=function(e) {
+         console.log("DB created");
+         result=e.target.result;
+         var tx=result.transaction("resume","readwrite");
+         store=tx.objectStore("resume");
+         var getData=store.get(resumeData);
+         getData.onsuccess=function(e){
+           console.log(e.target.result);
+           resumedetails(e.target.result);
+         }
+
+         var card=document.querySelector('.left');
+         var career=document.querySelector('.right');
+         function resumedetails(details1) {
+
+             let card2=document.createElement("div");
+             card2.classList.add("left1");
+             card.appendChild(card2);
+
+             let image=document.createElement("img");
+             image.src="user.jpg";
+             image.alt="image";
+             card2.appendChild(image);
+
+             let name=document.createElement("h1");
+             name.textContent=details1.Name;
+             card2.appendChild(name);
+
+             let occ=document.createElement("h3");
+             occ.textContent=details1.Role;
+             card2.appendChild(occ);
+               card.appendChild(document.createElement("hr"));
+
+
+
+                let card3=document.createElement("div");
+                card3.classList.add("left2");
+                card.appendChild(card3);
+
+                let sonof=document.createElement("p");
+                sonof.textContent=details1.Gmail;
+                card3.appendChild(sonof);
+
+                let mail=document.createElement("p");
+                mail.textContent=details1.Number;
+                card3.appendChild(mail);
+
+
+                let carobj=document.createElement("h2");
+                carobj.textContent="CAREER OBJECTIVE:"
+                career.appendChild(carobj);
+                let objective=document.createElement("h2");
+                objective.textContent=details1.Carobj;
+                career.appendChild(objective);
+                career.appendChild(document.createElement("hr"));
+
+                let academydetails=document.createElement("h2");
+                academydetails.textContent="ACADEMY DETAILS"
+
+                career.appendChild(academydetails);
+                  career.appendChild(document.createElement("hr"));
+                let co=document.createElement("h2");
+                co.textContent="GRADUATION:"
+                career.appendChild(co);
+
+                let phno=document.createElement("p");
+                phno.textContent=details1.Degree;
+                career.appendChild(phno);
+
+                let add=document.createElement("p");
+                add.textContent=details1.Institute;
+                career.appendChild(add);
+
+                let state=document.createElement("p");
+                state.textContent=details1.Branch;
+                career.appendChild(state);
+
+                let country=document.createElement("p");
+                country.textContent=details1.Yearofpassing;
+                career.appendChild(country);
+
+             var careername=document.createElement("h2");
+             careername.textContent=details1.percentage;
+             career.appendChild(careername);
+               // career.appendChild(document.createElement("hr"));
+
+             let tenplustwo=document.createElement("h2");
+             tenplustwo.textContent="INTERMEDIATE:";
+             career.appendChild(tenplustwo);
+
+
+             var matter=document.createElement("p");
+             matter.textContent=details1.course1;
+             career.appendChild(matter);
+
+
+              var academypro=document.createElement("h2");
+             academypro.textContent=details1.institute2;
+              career.appendChild(academypro);
+
+              var graduation=document.createElement("h2");
+              graduation.textContent=details1.syllabus;
+              career.appendChild(graduation);
+
+              var inst1=document.createElement("p");
+              inst1.textContent=details1.yearofpassing2;
+              career.appendChild(inst1);
+
+              var inter=document.createElement("h2");
+              inter.textContent=details1.percentage2;
+              career.appendChild(inter);
+   // career.appendChild(document.createElement("hr"));
+
+              let tenth=document.createElement("h2");
+              tenth.textContent="S.S.C:";
+              career.appendChild(tenth);
+
+              var inst2=document.createElement("p");
+              inst2.textContent=details1.syllabus2;
+              career.appendChild(inst2);
+
+              var school=document.createElement("h2");
+             school.textContent=details1.institute3;
+              career.appendChild(school);
+
+              var inst3=document.createElement("p");
+              inst3.textContent=details1.course2;
+              career.appendChild(inst3);
+
+
+              var tech=document.createElement("h3");
+              tech.textContent=details1.yearofpassing3;
+              career.appendChild(tech);
+
+              var pro=document.createElement("h2");
+              pro.textContent=details1.percentage3;
+              career.appendChild(pro);
+              career.appendChild(document.createElement("hr"));
+
+              let technical=document.createElement("h1");
+              technical.textContent="TECHNICAL SKILLS";
+              career.appendChild(technical);
+
+
+              var languages=document.createElement("p");
+              languages.textContent=details1.ps;
+              career.appendChild(languages);
+
+              var web=document.createElement("h2");
+              web.textContent=details1.ws;
+              career.appendChild(web);
+
+              var languages2=document.createElement("p");
+              languages2.textContent=details1.db;
+              career.appendChild(languages2);
+              career.appendChild(document.createElement("hr"));
+
+              var acheive=document.createElement("h3");
+              acheive.textContent=details1.a1;
+              career.appendChild(acheive);
+
+
+                var data=document.createElement("p");
+                data.textContent=details1.a2;
+                career.appendChild(data);
+                career.appendChild(document.createElement("hr"));
+
+         }
+       }
+
+
+    </script>
